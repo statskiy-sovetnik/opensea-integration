@@ -1,0 +1,19 @@
+{
+    "description": "The Queen of wealth and prosperity.", 
+    "image": "https://bafybeic6n2vngrxi3jabtun3md4ojy3xbslubyklsehddqdxw3lpprbfau.ipfs.nftstorage.link/0cd0c232749589.569289eb1abc6.png", 
+    "name": "Queen of Diamonds",
+    "attributes": [
+        {
+            "attribute": "Suit",
+            "value": "Diamonds"
+        },
+        {
+            "attribute": "Background",
+            "value": "White"
+        },
+        {
+            "attribute": "Seniority",
+            "value": "Queen"
+        }
+    ]
+}

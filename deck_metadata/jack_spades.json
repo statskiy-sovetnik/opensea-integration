@@ -1,0 +1,19 @@
+{
+    "description": "His heart is dark like the night sky.", 
+    "image": "https://bafybeic6n2vngrxi3jabtun3md4ojy3xbslubyklsehddqdxw3lpprbfau.ipfs.nftstorage.link/26a51e32749589.569289eb1970f.png", 
+    "name": "Jack of Spades",
+    "attributes": [
+        {
+            "attribute": "Suit",
+            "value": "Spades"
+        },
+        {
+            "attribute": "Background",
+            "value": "White"
+        },
+        {
+            "attribute": "Seniority",
+            "value": "Jack"
+        }
+    ]
+}

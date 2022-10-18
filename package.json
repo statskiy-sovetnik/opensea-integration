@@ -1,0 +1,26 @@
+{
+  "name": "opensea-integration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/statskiy-sovetnik/opensea-integration.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/statskiy-sovetnik/opensea-integration/issues"
+  },
+  "homepage": "https://github.com/statskiy-sovetnik/opensea-integration#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.7.3"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "hardhat": "^2.12.0"
+  }
+}

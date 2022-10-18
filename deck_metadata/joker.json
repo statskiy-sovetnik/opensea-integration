@@ -1,0 +1,19 @@
+{
+    "description": "The most powerful essence of the Deck.", 
+    "image": "https://bafybeic6n2vngrxi3jabtun3md4ojy3xbslubyklsehddqdxw3lpprbfau.ipfs.nftstorage.link/cd3b9332749589.569289eb20b50.png", 
+    "name": "Joker",
+    "attributes": [
+        {
+            "attribute": "Suit",
+            "value": "Joker"
+        },
+        {
+            "attribute": "Background",
+            "value": "Black"
+        },
+        {
+            "attribute": "Seniority",
+            "value": "Joker"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "description": "The King of wealth and prosperity.", 
+    "image": "https://bafybeic6n2vngrxi3jabtun3md4ojy3xbslubyklsehddqdxw3lpprbfau.ipfs.nftstorage.link/2514c832749589.569289eb21f7f.png", 
+    "name": "King of Diamonds",
+    "attributes": [
+        {
+            "attribute": "Suit",
+            "value": "Diamonds"
+        },
+        {
+            "attribute": "Background",
+            "value": "White"
+        },
+        {
+            "attribute": "Seniority",
+            "value": "King"
+        }
+    ]
+}

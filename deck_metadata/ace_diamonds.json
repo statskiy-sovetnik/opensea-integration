@@ -1,0 +1,19 @@
+{
+    "description": "The wealth is his hands and the fortune patronizes him.", 
+    "image": "https://bafybeic6n2vngrxi3jabtun3md4ojy3xbslubyklsehddqdxw3lpprbfau.ipfs.nftstorage.link/d941fc32749589.569289eb1fa78.png", 
+    "name": "Ace of Diamonds",
+    "attributes": [
+        {
+            "attribute": "Suit",
+            "value": "Diamonds"
+        },
+        {
+            "attribute": "Background",
+            "value": "Black"
+        },
+        {
+            "attribute": "Seniority",
+            "value": "Ace"
+        }
+    ]
+}
