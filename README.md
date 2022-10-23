@@ -1,5 +1,6 @@
 # Opensea Integration
 
-Sample NFT collection with integration on Opensea.
+Sample collection of playing cards NFTs with integration on Opensea. 
+
 
 

@@ -1,5 +1,5 @@
-require("@nomicfoundation/hardhat-toolbox");
 require('dotenv').config();
+require("@nomiclabs/hardhat-ethers");
 
 const NETWORK_ID = process.env.NETWORK_ID;
 const is_hardhat_network = Boolean(NETWORK_ID); // mainnet forking, if not specified
@@ -21,5 +21,5 @@ module.exports = {
     forking: {
       url: ALCHEMY_API_KEY,
     }
-  }
+  },
 };
