@@ -5,21 +5,18 @@ const {
 const { ethers } = require("hardhat");
 const { expect } = require("chai");
 const fetch = require("node-fetch");
+const { premintDeck } = require("../utils/premintDeck.js");
+const {
+  suits,
+  cards_to_suits,
+  cards_uri_names,
+  tokens_count
+} = require("../utils/cardsData.js");
   
 let deckInstance;
 let owner;
 const baseURI = process.env.BASE_URI;
-const suits = ["Diamonds", "Spades", "Joker", "Hearts"];
-const cards_to_suits = {
-  "ace_diamonds.json": suits[0], 
-  "jack_spades.json": suits[1], 
-  "joker.json": suits[2], 
-  "king_diamonds.json": suits[0], 
-  "king_hearts.json": suits[3], 
-  "queen_diamonds.json": suits[0]
-};
-const cards_uri_names = Object.keys(cards_to_suits);
-const tokens_count = 6;
+
 
 
 async function deployDeck() {
@@ -45,23 +42,18 @@ describe("Deck", async function () {
   });  
 
   describe('Minting', async function () {
-    it("Should mint all tokens to the owner", async function () {
-      const owner_address = await owner.getAddress();
-      const promises = [];
+    it("Should mint all tokens to the contract", async function () {
+      //const owner_address = await owner.getAddress();
+      const deck_address = deckInstance.address;
 
       expect(cards_uri_names.length).to.equal(tokens_count, "URI array length is not equal to number of tokens");
 
-      for(let uri_name of cards_uri_names) {
-        let full_uri = baseURI + uri_name;
-        let prom = deckInstance.mint(owner_address, full_uri);
-        promises.push(prom);
-      }
-
-      await Promise.all(promises);
+      //Mint tokens to the deck contract itself
+      await premintDeck(deck_address, deckInstance, cards_uri_names, baseURI);
 
       // Check that the owner posesses all tokens
-      const owner_balance = (await deckInstance.balanceOf(owner_address)).toNumber();
-      expect(owner_balance).to.equal(tokens_count, "Incorrect token balance of the owner");
+      const deck_balance = (await deckInstance.balanceOf(deck_address)).toNumber();
+      expect(deck_balance).to.equal(tokens_count, "Incorrect token balance of the owner");
     });
 
     it("Tokens have correct uri", async function () {
@@ -89,38 +81,5 @@ describe("Deck", async function () {
       }
     });
   });
-
-  /* describe("Deployment", function () {
-    it("Should set the right unlockTime", async function () {
-      const { lock, unlockTime } = await loadFixture(deployOneYearLockFixture);
-
-      expect(await lock.unlockTime()).to.equal(unlockTime);
-    });
-
-    it("Should set the right owner", async function () {
-      const { lock, owner } = await loadFixture(deployOneYearLockFixture);
-
-      expect(await lock.owner()).to.equal(owner.address);
-    });
-
-    it("Should receive and store the funds to lock", async function () {
-      const { lock, lockedAmount } = await loadFixture(
-        deployOneYearLockFixture
-      );
-
-      expect(await ethers.provider.getBalance(lock.address)).to.equal(
-        lockedAmount
-      );
-    });
-
-    it("Should fail if the unlockTime is not in the future", async function () {
-      // We don't use the fixture here because we want a different deployment
-      const latestTime = await time.latest();
-      const Lock = await ethers.getContractFactory("Lock");
-      await expect(Lock.deploy(latestTime, { value: 1 })).to.be.revertedWith(
-        "Unlock time should be in the future"
-      );
-    });
-  }); */
 });
   
